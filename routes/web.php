@@ -11,6 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::any('dlq','Dlucontr@dlq');
+Route::any('dle','Dlucontr@dle');
+
+Route::prefix('meeting')->group(function(){
+  Route::any('index','Meetingcontro@index');	
+  Route::any('create','Meetingcontro@create');
+  Route::any('store','Meetingcontro@store');
+  Route::any('edit','Meetingcontro@edit');
+  Route::any('update','Meetingcontro@update');
+  Route::any('destroy','Meetingcontro@destroy');
 });

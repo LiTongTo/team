@@ -15,6 +15,8 @@
 //     return view('welcome');
 // });
 
+
+//--------------------------------------------------------------------
 Route::any('dlq','Dlucontr@dlq');
 Route::any('dle','Dlucontr@dle');
 
@@ -29,3 +31,4 @@ Route::prefix('meeting')->middleware('login')->group(function(){
   Route::any('updates','Meetingcontro@updates');
   Route::any('destroy','Meetingcontro@destroy');
 });
+//--------------------------------------------------------------------

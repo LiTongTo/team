@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Sale extends Model
 {
 	//表名
@@ -16,4 +17,5 @@ class Sale extends Model
     //protected $fillable = ['name'];
     //黑名单
     protected $guarded = [];
+
 }

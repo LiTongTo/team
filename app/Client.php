@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Client extends Model
 {
+
 	//表名
     protected $table = 'client';
     //自增主键
@@ -16,4 +17,5 @@ class Client extends Model
     //protected $fillable = ['name'];
     //黑名单
     protected $guarded = [];
+
 }

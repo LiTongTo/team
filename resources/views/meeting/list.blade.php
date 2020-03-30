@@ -86,6 +86,7 @@
       	  dateType:'json',
       	  success:function(yy){
       	  	$("[type='checkbox']").prop('checked',false);
+      	  	$("#scyx").hide();
       	  	$("#th").html(yy);
       	  }	
       	});

@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::prefix('client')->group(function(){
+	Route::get('create','ClientController@create');
+	Route::post('store','ClientController@store');
+	Route::get('index{name?}','ClientController@index');
+	Route::get('destroy{id}','ClientController@destroy');
+	Route::get('edit{id}','ClientController@edit');
+	Route::post('update{id}','ClientController@update');
+});

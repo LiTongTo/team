@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use APP\Admin;
-
+use App\Admin;
+ 
 use Illuminate\Support\Facades\Cookie;
 
 class Dlucontr extends Controller
@@ -18,9 +18,9 @@ class Dlucontr extends Controller
 //-----------------------------------------------------
    public function dle(){
       $sj=request()->all();
-      //$yx=Admin::get();
-      $yz=Admin::where('admin_name',$sj['admin_name'])->all();
-      dd($sj);     
+
+      $yz=Admin::where('admin_name',$sj['admin_name'])->first();
+           
       if(!$yz){
       request()->session()->forget('yhdl');
       return redirect('/dlq')->with('yhcw','用户不存在');      	

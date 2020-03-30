@@ -22,7 +22,7 @@ class CheckToken
                return redirect('/dlq'); 
                exit; 
             }
-            $ck=json_decode($ck);
+           $ck=json_decode($ck);
           session(['yhdl'=>$ck]);
         }
         return $next($request);

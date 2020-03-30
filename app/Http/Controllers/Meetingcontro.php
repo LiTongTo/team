@@ -42,8 +42,9 @@ class Meetingcontro extends Controller
                 //$pj=$pj.$sc['fwr'];
             }
         }
-        if($dj['admin_level']==1){
-            $whers[]=['Meeting.sale_id',$dj['sale_id']];
+
+        if($dj->admin_level==1){
+            $whers[]=['Meeting.sale_id',$dj->sale_id];
             //$pj=$pj.$dj['sale_id'];
         }
         //dd('eva');
@@ -68,8 +69,8 @@ class Meetingcontro extends Controller
 
 
         $wher=[];
-        if($yw['admin_level']==1){
-          $wher[]=['sale_id',$yw['sale_id']];
+        if($yw->admin_level==1){
+          $wher[]=['sale_id',$yw->sale_id];
         }
         $yh=Client::where($wher)->get(); 
           if(request()->ajax()){
@@ -121,8 +122,8 @@ class Meetingcontro extends Controller
     {   
         $yw=session('yhdl');
         $wher=[];
-        if($yw['admin_level']==1){
-          $wher[]=['sale_id',$yw['sale_id']];
+        if($yw->admin_level==1){
+          $wher[]=['sale_id',$yw->sale_id];
         }
         $ywy=Sale::where($wher)->get();
 
@@ -198,8 +199,8 @@ class Meetingcontro extends Controller
         $xx=request()->all();
         $yw=session('yhdl');
         $wher=[];
-        if($yw['admin_level']==1){
-          $wher[]=['sale_id',$yw['sale_id']];
+        if($yw->admin_level==1){
+          $wher[]=['sale_id',$yw->sale_id];
         }
         $ywy=Sale::where($wher)->get();
 

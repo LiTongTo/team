@@ -22,3 +22,13 @@ Route::prefix('client')->group(function(){
 	Route::get('edit{id}','ClientController@edit');
 	Route::post('update{id}','ClientController@update');
 });
+
+Route::prefix('/admin')->group(function(){
+ Route::get('/create','AdminController@create');
+ Route::post('/store','AdminController@store');
+ Route::get('/checkOnly','AdminController@checkOnly');
+ Route::get('/index','AdminController@index');
+ Route::get('/edit/{id}','AdminController@edit');
+ Route::post('/update/{id}','AdminController@update');
+ Route::get('/destroy/{id}','AdminController@destroy');
+});
